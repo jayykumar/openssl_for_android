@@ -6,7 +6,8 @@ on:
     branches: [ master ]
 
 env:
-  OPENSSL_VERSION: 1_1_1w
+  OPENSSL_VERSION: 1.1.1w
+  OPENSSL_PROJECT: 1_1_1w
   ANDROID_NDK_VERSION: r20b
   WORK_PATH: /home/runner/work/openssl_for_android/openssl_for_android
 
@@ -43,7 +44,7 @@ jobs:
       - name: Download OpenSSL
         id: download_openssl
         run: |
-          aria2c https://github.com/openssl/openssl/releases/download/openssl-${{env.OPENSSL_VERSION}}/openssl-${{env.OPENSSL_VERSION}}.tar.gz
+          aria2c https://github.com/openssl/openssl/releases/download/openssl-${{env.OPENSSL_PROJECT}}/openssl-${{env.OPENSSL_VERSION}}.tar.gz
           tar -zxvf openssl-${{env.OPENSSL_VERSION}}.tar.gz
           echo "::set-output name=status::success"
 
