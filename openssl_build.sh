@@ -30,7 +30,7 @@ then
     export ANDROID_NDK_HOME=${ANDROID_NDK_PATH}
     PATH=$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin:$PATH
     cd ${OPENSSL_TMP_FOLDER}
-    ./Configure android-arm -DANDROID_API=${ANDROID_TARGET_API} no-shared no-tests --prefix=${OUTPUT_PATH}
+    ./Configure android-arm -DANDROID_API=${ANDROID_TARGET_API}  shared threads no-asm no-sse2 no-ssl2 no-ssl3 no-comp no-hw no-engine --prefix=${OUTPUT_PATH}
     build_library
 
 elif [ "$ANDROID_TARGET_ABI" == "armeabi-v7a" ]
@@ -38,7 +38,7 @@ then
     export ANDROID_NDK_HOME=${ANDROID_NDK_PATH}
     PATH=$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin:$PATH
     cd ${OPENSSL_TMP_FOLDER}
-    ./Configure android-arm -DANDROID_API=${ANDROID_TARGET_API} no-shared no-tests --prefix=${OUTPUT_PATH}
+    ./Configure android-arm -DANDROID_API=${ANDROID_TARGET_API}  shared threads no-asm no-sse2 no-ssl2 no-ssl3 no-comp no-hw no-engine --prefix=${OUTPUT_PATH}
     build_library
 
 elif [ "$ANDROID_TARGET_ABI" == "arm64-v8a" ]
@@ -46,7 +46,7 @@ then
     export ANDROID_NDK_HOME=${ANDROID_NDK_PATH}
     PATH=$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin:$PATH
     cd ${OPENSSL_TMP_FOLDER}
-    ./Configure android-arm64 -DANDROID_API=${ANDROID_TARGET_API} no-shared no-tests --prefix=${OUTPUT_PATH}
+    ./Configure android-arm64 -DANDROID_API=${ANDROID_TARGET_API}  shared threads no-asm no-sse2 no-ssl2 no-ssl3 no-comp no-hw no-engine --prefix=${OUTPUT_PATH}
     build_library
 
 elif [ "$ANDROID_TARGET_ABI" == "mips" ]
@@ -54,7 +54,7 @@ then
     export ANDROID_NDK_HOME=${ANDROID_NDK_PATH}
     PATH=$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin:$PATH
     cd ${OPENSSL_TMP_FOLDER}
-    ./Configure android-mips -DANDROID_API=${ANDROID_TARGET_API} no-shared no-tests --prefix=${OUTPUT_PATH}
+    ./Configure android-mips -DANDROID_API=${ANDROID_TARGET_API}  shared threads no-asm no-sse2 no-ssl2 no-ssl3 no-comp no-hw no-engine --prefix=${OUTPUT_PATH}
     build_library
 
 elif [ "$ANDROID_TARGET_ABI" == "mips64" ]
@@ -62,7 +62,7 @@ then
     export ANDROID_NDK_HOME=${ANDROID_NDK_PATH}
     PATH=$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin:$PATH
     cd ${OPENSSL_TMP_FOLDER}
-    ./Configure android-mips64 -DANDROID_API=${ANDROID_TARGET_API} no-shared no-tests --prefix=${OUTPUT_PATH}
+    ./Configure android-mips64 -DANDROID_API=${ANDROID_TARGET_API}  shared threads no-asm no-sse2 no-ssl2 no-ssl3 no-comp no-hw no-engine --prefix=${OUTPUT_PATH}
     build_library
 
 elif [ "$ANDROID_TARGET_ABI" == "x86" ]
@@ -70,7 +70,7 @@ then
     export ANDROID_NDK_HOME=${ANDROID_NDK_PATH}
     PATH=$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin:$PATH
     cd ${OPENSSL_TMP_FOLDER}
-    ./Configure android-x86 -DANDROID_API=${ANDROID_TARGET_API} no-shared no-tests --prefix=${OUTPUT_PATH}
+    ./Configure android-x86 -DANDROID_API=${ANDROID_TARGET_API}  shared threads no-asm no-sse2 no-ssl2 no-ssl3 no-comp no-hw no-engine --prefix=${OUTPUT_PATH}
     build_library
 
 elif [ "$ANDROID_TARGET_ABI" == "x86_64" ]
@@ -78,7 +78,7 @@ then
     export ANDROID_NDK_HOME=${ANDROID_NDK_PATH}
     PATH=$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin:$PATH
     cd ${OPENSSL_TMP_FOLDER}
-    ./Configure android-x86_64 -DANDROID_API=${ANDROID_TARGET_API} no-shared no-tests --prefix=${OUTPUT_PATH}
+    ./Configure android-x86_64 -DANDROID_API=${ANDROID_TARGET_API}  shared threads no-asm no-sse2 no-ssl2 no-ssl3 no-comp no-hw no-engine --prefix=${OUTPUT_PATH}
     build_library
 
 else
