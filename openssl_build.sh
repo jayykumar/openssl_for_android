@@ -1,4 +1,6 @@
-#!/bin/bash -e
+#!/bin/bash
+
+#set -v
 
 WORK_PATH=$(cd "$(dirname "$0")";pwd)
 ANDROID_NDK_PATH=${WORK_PATH}/android-ndk-r23c
