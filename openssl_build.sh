@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 WORK_PATH=$(cd "$(dirname "$0")";pwd)
-ANDROID_NDK_PATH=${WORK_PATH}/android-ndk-r23b
+ANDROID_NDK_PATH=${WORK_PATH}/android-ndk-r23c
 OPENSSL_SOURCES_PATH=${WORK_PATH}/openssl-1.1.1s
 ANDROID_TARGET_API=$1
 ANDROID_TARGET_ABI=$2
