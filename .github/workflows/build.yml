@@ -6,8 +6,8 @@ on:
     branches: [ master ]
 
 env:
-  OPENSSL_VERSION: 1.1.1p
-  OPENSSL_PROJECT: 1_1_1p
+  OPENSSL_VERSION: 1.1.1s
+  OPENSSL_PROJECT: 1_1_1s
   ANDROID_NDK_VERSION: r23b
   WORK_PATH: /home/runner/work/openssl_for_android/openssl_for_android
 
