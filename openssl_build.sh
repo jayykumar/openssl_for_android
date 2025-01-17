@@ -35,6 +35,7 @@ then
 
 elif [ "$ANDROID_TARGET_ABI" == "armeabi-v7a" ]
 then
+	#perl -pi -w -e 's/\-mandroid//g;' ./Configure
     export ANDROID_NDK_HOME=${ANDROID_NDK_PATH}
     PATH=$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin:$PATH
     cd ${OPENSSL_TMP_FOLDER}
