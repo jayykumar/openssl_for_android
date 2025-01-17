@@ -4,10 +4,10 @@
 
 WORK_PATH=$(cd "$(dirname "$0")";pwd)
 ANDROID_NDK_PATH=${WORK_PATH}/android-ndk-r23c
-OPENSSL_SOURCES_PATH=${WORK_PATH}/openssl-1.1.1s
+OPENSSL_SOURCES_PATH=${WORK_PATH}/openssl-1.1.1w
 ANDROID_TARGET_API=$1
 ANDROID_TARGET_ABI=$2
-OUTPUT_PATH=${WORK_PATH}/openssl_1.1.1s_${ANDROID_TARGET_ABI}
+OUTPUT_PATH=${WORK_PATH}/openssl_1.1.1w_${ANDROID_TARGET_ABI}
 
 OPENSSL_TMP_FOLDER=/tmp/openssl_${ANDROID_TARGET_ABI}
 rm -rf ${OPENSSL_TMP_FOLDER}
@@ -49,7 +49,7 @@ then
     export ANDROID_NDK_HOME=${ANDROID_NDK_PATH}
     PATH=$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin:$PATH
     cd ${OPENSSL_TMP_FOLDER}
-    ./Configure android-arm64 --D__ANDROID_API__=${ANDROID_TARGET_API}  shared threads no-asm no-sse2 no-ssl2 no-ssl3 no-comp no-hw no-engine --prefix=${OUTPUT_PATH}
+    ./Configure android-arm64 -D__ANDROID_API__=${ANDROID_TARGET_API}  shared threads no-asm no-sse2 no-ssl2 no-ssl3 no-comp no-hw no-engine --prefix=${OUTPUT_PATH}
     build_library
 
 elif [ "$ANDROID_TARGET_ABI" == "mips" ]
