@@ -14,6 +14,7 @@ rm -rf ${OPENSSL_TMP_FOLDER}
 mkdir -p ${OPENSSL_TMP_FOLDER}
 cp -r ${OPENSSL_SOURCES_PATH}/* ${OPENSSL_TMP_FOLDER}
 
+
 function build_library {
     rm -rf ${OUTPUT_PATH}
     mkdir -p ${OUTPUT_PATH}
